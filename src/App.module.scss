@@ -1,0 +1,83 @@
+@import './styles/general.scss';
+.store {
+  min-height: 100vh;
+  display: flex;
+  background-color: #cafff8;
+}
+.wrap {
+  width: 80%;
+  height: 90%;
+  margin: 30px auto;
+  border-radius: 18px;
+  background-color: #fff;
+}
+.container {
+  padding: 0 20px;
+}
+.navigation {
+  margin: 0 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ebebeb;
+}
+.logo {
+  font-family: 'Sedgwick Ave', cursive;
+  font-size: 24px;
+  letter-spacing: 3px;
+  color: #111111;
+  text-decoration: none;
+  cursor: pointer;
+  & span {
+    color: #00d8ff;
+    transition: color 0.25s ease-in-out;
+  }
+  &:hover {
+    span {
+      color: #54e5ff;
+    }
+  }
+}
+.menu {
+  margin-left: auto;
+}
+.search {
+  margin-right: 20px;
+  border: 1px solid #ebebeb;
+  border-radius: 7px;
+  padding: 8px 12px;
+  font-size: 12px;
+  outline: none;
+  &False {
+    font-size: 18px;
+    & span {
+      color: #ff0000;
+      font-weight: bold;
+    }
+  }
+}
+.cart {
+  border: 1px solid #ebebeb;
+  border-radius: 7px;
+  padding: 8px 12px;
+  background-color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+.title {
+  &H1 {
+    padding: 20px 0;
+    font-size: 28px;
+  }
+}
+.cards {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  @media (max-width: 1240px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+  }
+}
