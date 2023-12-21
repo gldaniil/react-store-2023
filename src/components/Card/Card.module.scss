@@ -1,5 +1,5 @@
 .card {
-  width: 100%;
+  width: calc((100% - 60px) / 4);
   border: 1px solid #ebebeb;
   border-radius: 7px;
   padding: 20px;
@@ -11,16 +11,30 @@
     transform: translateY(5px);
     background-color: #f8f8f8;
   }
+  @media (max-width: 1200px) {
+    width: calc((100% - 40px) / 3);
+  }
+  @media (max-width: 768px) {
+    width: calc((100% - 20px) / 2);
+  }
+  @media (max-width: 576px) {
+    width: 100%;
+  }
   &Bottom {
+    padding-top: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
   }
 }
 .image {
   width: 100%;
-  height: auto;
-  min-height: 300px;
+  height: 250px;
   padding: 40px 60px;
+  flex-shrink: 0;
+  @media (max-width: 1600px) {
+    padding: 40px 5%;
+  }
 }
 .info {
   display: flex;
@@ -37,14 +51,16 @@
 }
 .description {
   flex-grow: 1;
+  @media (max-width: 992px) {
+    font-size: 12px;
+  }
 }
 .price {
-  margin-top: 10px;
   font-weight: bold;
 }
 .button {
   width: 85px;
-  padding: 5px auto;
+  padding: 5px;
   border: 2px solid;
   border-radius: 5px;
   font-weight: bold;
